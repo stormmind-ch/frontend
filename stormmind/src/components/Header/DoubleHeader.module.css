@@ -25,9 +25,9 @@
 }
 
 .mainLinks {
-  display: flex;
-  gap: 2rem; /* oder 16px oder 24px – was du willst */
-  margin-right: 0;
+    display: flex;
+    gap: 2rem;
+    margin-right: 0;
 }
 
 .mainLink {
