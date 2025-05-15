@@ -5,7 +5,7 @@
 }
 
 .logo {
-  height: 150px;
+  height: 100px;
   width: auto;
 }
 
@@ -25,9 +25,9 @@
 }
 
 .mainLinks {
-    display: flex;
-    gap: 2rem; /* oder 16px oder 24px – was du willst */
-    margin-right: 0;
+  display: flex;
+  gap: 2rem; /* oder 16px oder 24px – was du willst */
+  margin-right: 0;
 }
 
 .mainLink {
@@ -38,8 +38,8 @@
   font-weight: 700;
   border-bottom: 2px solid transparent;
   transition:
-    border-color 100ms ease,
-    color 100ms ease;
+          border-color 100ms ease,
+          color 100ms ease;
 
   @mixin hover {
     color: light-dark(var(--mantine-color-black), var(--mantine-color-white));

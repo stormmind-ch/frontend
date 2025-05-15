@@ -1,23 +1,15 @@
-import { Text, Center, Title} from '@mantine/core';
-import DmgMap from '../components/DamageMap.tsx';
+import { HeroTitle } from '../components/HeroTitle/HeroTitle.tsx';
+import DmgMap from "../components/DamageMap.tsx";
+import {Center} from "@mantine/core";
 
 function Home() {
   return (
-    <Center>
-    <Description/>
-   <DmgMap/>
-
-    </Center>
+      <Center style={{flexDirection: 'column'}}>
+        <HeroTitle />
+        <DmgMap/>
+      </Center>
 
   );
 }
 
-function Description() {
-  return (
-    <Title order={2}>
-      Welcome to StormMind!
-    </Title>
-  )
-}
-
-export {Home}
+export { Home };
