@@ -12,6 +12,9 @@
   "dependencies": {
     "@mantine/core": "^8.0.1",
     "@mantine/hooks": "^8.0.1",
+    "@mantinex/dev-icons": "^2.0.0",
+    "@mantinex/mantine-logo": "^2.0.0",
+    "@tabler/icons-react": "^3.31.0",
     "@vis.gl/react-google-maps": "^1.5.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

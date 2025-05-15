@@ -21,6 +21,8 @@ export function RootLayout() {
           <Outlet />
         </Box>
       </AppShell.Main>
+        <AppShell.Footer>
+        </AppShell.Footer>
     </AppShell>
   );
 }

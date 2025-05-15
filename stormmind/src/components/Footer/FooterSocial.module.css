@@ -1,0 +1,22 @@
+.footer {
+    width: 100%;
+}
+
+.logo {
+    width: 50px;
+}
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $mantine-breakpoint-xs) {
+        flex-direction: column;
+    }
+}
+
+.links {
+    @media (max-width: $mantine-breakpoint-xs) {
+        margin-top: var(--mantine-spacing-md);
+    }
+}
