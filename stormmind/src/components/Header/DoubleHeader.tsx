@@ -8,7 +8,9 @@ import classes from './DoubleHeader.module.css';
 const mainLinks = [
   { link: '#', label: 'Home' },
   { link: '#', label: 'Forcasting' },
-  { link: '#', label: 'About Us' },
+    {link: '#', label: 'Report'},
+  { link: '#', label: 'About Us' }
+
 ];
 
 export function DoubleHeader() {
