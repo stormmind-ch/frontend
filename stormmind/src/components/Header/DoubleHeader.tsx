@@ -1,16 +1,14 @@
 import { useState } from 'react';
-import { Anchor, Box, Burger, Container, Group } from '@mantine/core';
+import { Anchor, Box, Burger, Container, Group, Text } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo_with_text.svg';
 import classes from './DoubleHeader.module.css';
 
-
 const mainLinks = [
-  { link: '#', label: 'Home' },
-  { link: '#', label: 'Forcasting' },
-    {link: '#', label: 'Report'},
-  { link: '#', label: 'About Us' }
-
+  { link: '', label: 'Home' },
+  { link: '', label: 'Forecasting' },
+  { link: '#', label: 'Report' },
+  { link: '#', label: 'About Us' },
 ];
 
 export function DoubleHeader() {
@@ -32,11 +30,14 @@ export function DoubleHeader() {
     </Anchor>
   ));
 
-
   return (
     <header className={classes.header}>
       <Container className={classes.inner}>
-        <img src={logo} alt="Logo" className={classes.logo} />
+
+        <Group align="center" gap="sm">
+          <img src={logo} alt="Logo" className={classes.logo} />
+        </Group>
+
         <Box className={classes.links} visibleFrom="sm">
           <Group gap={0} justify="flex-end" className={classes.mainLinks}>
             {mainItems}
