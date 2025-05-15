@@ -1,5 +1,5 @@
 // src/components/RootLayout.tsx
-import { AppShell, Box } from '@mantine/core';
+import { AppShell, Box, Burger, Group, UnstyledButton } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
 import { DoubleHeader } from './Header/DoubleHeader';
 
@@ -10,12 +10,15 @@ export function RootLayout() {
       padding="md"
     >
       <AppShell.Header>
-        <DoubleHeader />
+        <Group h="100%" px="md">
+          <DoubleHeader />
+        </Group>
       </AppShell.Header>
+
+
       <AppShell.Main>
         <Box
           style={{
-            height: 'calc(100vh - 84px)', // Subtract header height
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
