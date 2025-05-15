@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {  Box, Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo_with_text.svg';
 import classes from './DoubleHeader.module.css';
 import {Link} from 'react-router-dom';
 
