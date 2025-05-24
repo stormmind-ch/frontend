@@ -1,19 +1,21 @@
 import { Autocomplete } from '@mantine/core';
 import '../App.css'
 
+
 interface SimpleSelectProps {
     placeholder: string;
     options: string[];
 }
 
 
-export function SimpleSelect({ placeholder, options }: SimpleSelectProps) {
+export function SimpleSelect({ placeholder, options, onChange }: SimpleSelectProps) {
     return (
         <div className="animated-border-wrapper"> {}
             <Autocomplete
                 placeholder={placeholder}
                 data={options}
                 withScrollArea
+                onChange={onChange}
                 comboboxProps={{ position: 'bottom', middlewares: { flip: false, shift: false } }}
                 classNames={{
                     dropdown: 'custom-dropdown',

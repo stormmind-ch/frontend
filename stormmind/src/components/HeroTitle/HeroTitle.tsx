@@ -7,11 +7,11 @@ export function HeroTitle() {
     <div className={classes.wrapper}>
       <Container size={700} className={classes.inner}>
         <h1 className={classes.title}>
-          A{' '}
+          Swiss{' '}
           <Text component="span" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }} inherit>
-            fully functional
+            AI Innovation
           </Text>{' '}
-          AI for Storm Damage Forcasting.
+          for Storm Damage Forcasting.
         </h1>
 
         <Text className={classes.description} color="dimmed">

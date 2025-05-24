@@ -5,9 +5,13 @@ interface StyledButtonProps {
     url: string;
 }
 
-export function StyledButton({ text, url }: StyledButtonProps) {
+export function StyledButton({ text, url, onClick }: StyledButtonProps) {
     const handleClick = () => {
-        window.open(url, '_blank'); // oder '_self' für gleichen Tab
+        if (onClick) {
+            onClick();
+        } else if (url) {
+            window.open(url, '_self');
+        }
     };
 
     return (

@@ -2,17 +2,17 @@ import type {RawDamageResponse} from "../types/Damages.tsx";
 import type {HeatmapPoint} from "../types/HeatMap.tsx";
 
 export function processDamageData(damageResponse: RawDamageResponse): HeatmapPoint[] {
-    if (!damageResponse || !Array.isArray(damageResponse.all_grouped_damages)) {
+    if (!damageResponse || !Array.isArray(damageResponse.AllGroupedDamages)) {
         console.error("Invalid data format", damageResponse);
         return [];
     }
 
-    return damageResponse.all_grouped_damages.map(
+    return damageResponse.AllGroupedDamages.map(
         (damage) => {
             return {
                 lat: damage.latitude,
                 lng: damage.longitude,
-                weight: calculateWeight(damage.occurrence_count),
+                weight: calculateWeight(damage.occurrenceCount),
                 mun: damage.municipality
             }
         }
@@ -21,6 +21,6 @@ export function processDamageData(damageResponse: RawDamageResponse): HeatmapPoi
 }
 
 function calculateWeight(occurrenceCount: number): number {
-    const max = 130;
+    const max = 2;
     return Math.min(100, (occurrenceCount / max) * 100);
 }

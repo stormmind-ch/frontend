@@ -51,7 +51,7 @@ const DmgMap = () => (
     <Map
       style={{ width: '600px', height: '400px' }}
       defaultCenter={{ lat: 46.8132, lng: 8.2242 }} // Center of Switzerland
-      defaultZoom={7}
+      defaultZoom={7.5}
       gestureHandling="greedy"
       disableDefaultUI={true}
     >

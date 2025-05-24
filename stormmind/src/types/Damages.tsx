@@ -2,9 +2,9 @@ type RawDamage = {
     municipality: string,
     latitude: number,
     longitude: number,
-    occurrence_count: number
+    occurrenceCount: number
 }
 
 export type RawDamageResponse = {
-    all_grouped_damages: RawDamage[];
+    AllGroupedDamages: RawDamage[];
 };
