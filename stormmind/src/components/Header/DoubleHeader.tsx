@@ -10,7 +10,7 @@ const mainLinks = [
   { link: '/', label: 'Home' },
   { link: '/Forecast', label: 'Forcasting' },
     {link: '/Report', label: 'Report'},
-  { link: '#', label: 'About Us' }
+  { link: '/AboutUs', label: 'About Us' }
 
 ];
 
