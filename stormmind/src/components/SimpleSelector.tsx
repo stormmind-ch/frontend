@@ -5,6 +5,7 @@ import '../App.css'
 interface SimpleSelectProps {
     placeholder: string;
     options: string[];
+    onChange: (value: string) => void;
 }
 
 

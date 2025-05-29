@@ -2,7 +2,8 @@ import { Button } from "@mantine/core";
 
 interface StyledButtonProps {
     text: string;
-    url: string;
+    url?: string;
+    onClick?: () => void;
 }
 
 export function StyledButton({ text, url, onClick }: StyledButtonProps) {
