@@ -4,6 +4,7 @@ import { Center } from "@mantine/core";
 function AboutUs() {
     return (
         <Center style={{ paddingTop: '150px' }}>
+            <p>Chum endlich man</p>
             <div
                 style={{
                     display: 'flex',
