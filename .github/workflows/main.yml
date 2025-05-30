@@ -8,9 +8,13 @@ on:
 jobs:
   remote-execution:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
+      - name: Set IMAGE_TAG from commit
+        run: echo "IMAGE_TAG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
       - name: Setup SSH key
         run: |
@@ -22,9 +26,13 @@ jobs:
       - name: Run script on remote server
         run: |
           ssh -i ~/.ssh/id_ed25519 ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
-          cd ~/new_frontend/frontend/;
-          git checkout main;
-          git pull;
-          docker build -t frontend-test ~/new_frontend/frontend/stormmind/;
-          docker tag frontend-test stormmind/frontend-test;
-          docker push stormmind/frontend-test;"
+            export IMAGE_TAG=${{ env.IMAGE_TAG }}
+            cd ~/new_frontend/frontend/;
+            git checkout main;
+            git pull;
+            docker build -t stormmind/frontend-test:\$IMAGE_TAG ~/new_frontend/frontend/stormmind/;
+            docker push stormmind/frontend-test:\$IMAGE_TAG;
+
+            # Patch Kubernetes Deployment with new image
+            kubectl set image deployment/frontend frontend=stormmind/frontend-test:\$IMAGE_TAG --namespace=default;
+          "
