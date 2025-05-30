@@ -9,7 +9,7 @@ export function HeroTitle() {
         <h1 className={classes.title}>
           Swiss{' '}
           <Text component="span" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }} inherit>
-            AI IInnovation
+            AI Innovation
           </Text>{' '}
           for Storm Damage Forcasting.
         </h1>
