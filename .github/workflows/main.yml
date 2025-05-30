@@ -27,4 +27,5 @@ jobs:
           git pull;
           docker build -t frontend-test ~/new_frontend/frontend/stormmind/;
           docker tag frontend-test stormmind/frontend-test;
-          docker push stormmind/frontend-test;"
+          docker push stormmind/frontend-test;
+          kubectl delete pods -n default --all;"
