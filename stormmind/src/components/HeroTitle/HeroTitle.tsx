@@ -11,7 +11,7 @@ export function HeroTitle() {
           <Text component="span" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }} inherit>
             AI Innovation
           </Text>{' '}
-          for Storm Damage Forcasting.
+          for SSStorm Damage Forcasting.
         </h1>
 
         <Text className={classes.description} color="dimmed">
