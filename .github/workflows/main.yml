@@ -23,6 +23,7 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_ed25519 ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
           cd ~/new_frontend/frontend/;
+          git stash;
           git checkout main;
           git pull;
           docker build -t frontend-test ~/new_frontend/frontend/stormmind/;
