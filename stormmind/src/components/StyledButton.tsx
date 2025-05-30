@@ -2,12 +2,17 @@ import { Button } from "@mantine/core";
 
 interface StyledButtonProps {
     text: string;
-    url: string;
+    url?: string;
+    onClick?: () => void;
 }
 
-export function StyledButton({ text, url }: StyledButtonProps) {
+export function StyledButton({ text, url, onClick }: StyledButtonProps) {
     const handleClick = () => {
-        window.open(url, '_blank'); // oder '_self' für gleichen Tab
+        if (onClick) {
+            onClick();
+        } else if (url) {
+            window.open(url, '_self');
+        }
     };
 
     return (

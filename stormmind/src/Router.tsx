@@ -4,6 +4,7 @@ import { Home } from './pages/Home.tsx';
 import { RootLayout } from './components/RootRouter.tsx';
 import {Forecast} from "./pages/Forecast.tsx";
 import {Report} from "./pages/Report.tsx";
+import {AboutUs} from "./pages/AboutUs.tsx";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,10 @@ const router = createBrowserRouter([
         path: 'report',
         element: <Report />,
       },
-      // Add more routes here
+      {
+        path: 'aboutus',
+        element: <AboutUs/>
+      }
     ],
   },
 ]);
