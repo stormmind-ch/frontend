@@ -8,9 +8,9 @@ import {Link} from 'react-router-dom';
 
 const mainLinks = [
   { link: '/', label: 'Home' },
-  { link: '/Forecast', label: 'Forcasting' },
-    {link: '/Report', label: 'Report'},
-  { link: '/AboutUs', label: 'About Us' }
+  { link: '/forecast', label: 'Forcasting' },
+    {link: '/report', label: 'Report'},
+  { link: '/aboutus', label: 'About Us' }
 
 ];
 
