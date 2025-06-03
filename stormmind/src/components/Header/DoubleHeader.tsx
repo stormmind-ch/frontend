@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {  Box, Burger, Container, Group } from '@mantine/core';
+import {Box, Burger, Container, Group, Stack} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import logo from '../../assets/logo_with_text.svg';
 import classes from './DoubleHeader.module.css';
@@ -47,6 +47,13 @@ export function DoubleHeader() {
           size="sm"
           hiddenFrom="sm"
         />
+        {opened && (
+            <Box className={classes.mobileMenu}>
+              <Stack gap="sm">
+                {mainItems}
+              </Stack>
+            </Box>
+        )}
       </Container>
 
     </header>
