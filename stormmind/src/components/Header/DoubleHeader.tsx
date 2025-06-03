@@ -34,7 +34,9 @@ export function DoubleHeader() {
   return (
     <header className={classes.header}>
       <Container className={classes.inner}>
+        <Link to="/">
         <img src={logo} alt="Logo" className={classes.logo} />
+          </Link>
         <Box className={classes.links} visibleFrom="sm">
           <Group gap={0} justify="flex-end" className={classes.mainLinks}>
             {mainItems}
