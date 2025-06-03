@@ -1,12 +1,12 @@
 // src/router.tsx
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { Home } from './pages/Home.tsx';
 import { RootLayout } from './components/RootRouter.tsx';
 import {Forecast} from "./pages/Forecast.tsx";
 import {Report} from "./pages/Report.tsx";
 import {AboutUs} from "./pages/AboutUs.tsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <RootLayout />,
