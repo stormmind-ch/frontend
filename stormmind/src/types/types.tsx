@@ -17,13 +17,26 @@ export interface RawDamageResponse {
     AllGroupedDamages: RawDamage[];
 }
 
-export interface MunicipalityForecast {
+/*export interface MunicipalityForecast {
     municipality: Municipality;
     prediction: number;
-}
+}*/
 
 export interface AllMunicipalityForecast {
     forecastDtos: MunicipalityForecast[];
+}
+
+export interface MunicipalityForecast {
+    forecast: {
+        forecast: number;
+        municipality: {
+            name: string;
+            coordinates: {
+                latitude: number;
+                longitude: number;
+            };
+        };
+    };
 }
 
 export interface HeatmapPoint {

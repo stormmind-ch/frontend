@@ -1,4 +1,4 @@
-import type {AllMunicipalityForecast, HeatmapPoint, RawDamageResponse} from "../types/types.tsx";
+import type { AllMunicipalityForecast, HeatmapPoint, RawDamageResponse} from "../types/types.tsx";
 
 export const toDamageHeatmapPoints = (
     data: RawDamageResponse,
@@ -15,11 +15,11 @@ export const toDamageHeatmapPoints = (
 export const toForecastHeatmapPoints = (
     data: AllMunicipalityForecast ,
 ): HeatmapPoint[] =>
-    data.forecastDtos.map(({ municipality, prediction }) => ({
-        lat: municipality.coordinates.latitude,
-        lng: municipality.coordinates.longitude,
-        weight: calculateWeight(prediction),
-        mun: municipality.name,
+    data.forecastDtos.map(({ forecast }) => ({
+        lat: forecast.municipality.coordinates.latitude,
+        lng: forecast.municipality.coordinates.longitude,
+        weight: calculateWeight(forecast.forecast),
+        mun: forecast.municipality.name,
     }));
 
 function calculateWeight(forecast: number): number {
