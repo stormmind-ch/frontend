@@ -29,6 +29,13 @@ export interface AllMunicipalityForecast {
 export interface MunicipalityForecast {
     forecast: {
         forecast: number;
+        centroid: {
+            name: string;
+            coordinates: {
+                latitude: number;
+                longitude: number;
+            };
+        };
         municipality: {
             name: string;
             coordinates: {
