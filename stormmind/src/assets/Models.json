@@ -1,1 +1,7 @@
-["Transformer","FNN"]
+["FNN-3",
+  "FNN-6",
+  "LSTM-3",
+  "LSTM-6",
+  "TRANSFORMER-3",
+  "TRANSFORMER-6"
+  ]
